@@ -28,6 +28,7 @@ public class UsersView extends VerticalLayout implements BeforeEnterObserver {
         getStyle().set("background", "#F3F4F6");
 
         Grid<User> grid = new Grid<>(User.class, false);
+        grid.getElement().setAttribute("aria-label", "Daftar pengguna");
         grid.addComponentColumn(user -> {
             if (user.getPhotoPath() == null || user.getPhotoPath().isBlank()) {
                 return new Span("-");

@@ -75,6 +75,7 @@ public class ProfileView extends VerticalLayout {
             pendingPhotoName.set(metadata.fileName());
             pendingPhotoData.set(data);
         }));
+        upload.getElement().setAttribute("aria-label", "Unggah foto profil");
         upload.setAcceptedMimeTypes("image/png", "image/jpeg", "image/webp");
         upload.setAcceptedFileExtensions(".png", ".jpg", ".jpeg", ".webp");
         upload.setMaxFiles(1);

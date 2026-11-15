@@ -52,6 +52,7 @@ public class UserTransactionsView extends VerticalLayout implements HasUrlParame
         balance.getStyle().set("margin", "0").set("font-weight", "600").set("color", "#1E40AF");
         empty.getStyle().set("margin", "0").set("color", "#4B5563");
 
+        grid.getElement().setAttribute("aria-label", "Daftar transaksi pengguna");
         grid.addComponentColumn(transaction -> {
             if (transaction.getProofPath() == null || transaction.getProofPath().isBlank()) {
                 return new Span("-");

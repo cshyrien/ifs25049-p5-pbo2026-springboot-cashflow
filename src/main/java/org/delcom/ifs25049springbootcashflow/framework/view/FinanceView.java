@@ -145,6 +145,7 @@ public class FinanceView extends VerticalLayout {
     }
 
     private void configureGrid() {
+        grid.getElement().setAttribute("aria-label", "Daftar transaksi keuangan");
         grid.addComponentColumn(this::createProofPreview)
                 .setHeader("Bukti")
                 .setKey("proof")
@@ -229,10 +230,13 @@ public class FinanceView extends VerticalLayout {
     }
 
     private void configureToolbar() {
+        // Placeholder saja tidak cukup sebagai nama aksesibel untuk pembaca layar.
+        searchField.setLabel("Cari transaksi");
         searchField.setPlaceholder("Cari keterangan...");
         searchField.setPrefixComponent(VaadinIcon.SEARCH.create());
         searchField.setClearButtonVisible(true);
 
+        sortField.setLabel("Urutkan transaksi");
         sortField.setPlaceholder("Urutkan");
         sortField.setItems(SortOption.values());
         sortField.setItemLabelGenerator(SortOption::label);
@@ -566,6 +570,7 @@ public class FinanceView extends VerticalLayout {
             pendingName.set(metadata.fileName());
             pendingData.set(data);
         }));
+        upload.getElement().setAttribute("aria-label", "Unggah bukti transaksi opsional");
         upload.setAcceptedMimeTypes("image/png", "image/jpeg", "image/webp");
         upload.setAcceptedFileExtensions(".png", ".jpg", ".jpeg", ".webp");
         upload.setMaxFiles(1);

@@ -202,6 +202,11 @@
                         <groupId>com.vaadin</groupId>
                         <artifactId>vaadin-maven-plugin</artifactId>
                         <version>${vaadin.version}</version>
+                        <configuration>
+                            <!-- Paksa bundling production yang dipindai dari komponen yang benar-benar dipakai. -->
+                            <forceProductionBuild>true</forceProductionBuild>
+                            <optimizeBundle>true</optimizeBundle>
+                        </configuration>
                         <executions>
                             <execution>
                                 <goals>
