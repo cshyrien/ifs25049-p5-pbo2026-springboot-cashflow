@@ -120,6 +120,7 @@ public class RegisterView extends VerticalLayout {
                 .set("box-shadow", "0 8px 24px rgba(15, 23, 42, 0.08)")
                 .set("box-sizing", "border-box");
 
+        card.getElement().setAttribute("role", "main");
         add(card);
     }
 }

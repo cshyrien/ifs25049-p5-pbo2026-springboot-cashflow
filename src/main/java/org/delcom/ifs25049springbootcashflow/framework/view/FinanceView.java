@@ -45,7 +45,7 @@ import java.util.concurrent.atomic.AtomicReference;
 @PageTitle("Cashflow")
 public class FinanceView extends VerticalLayout {
 
-    private static final String INCOME_COLOR = "#16A34A";
+    private static final String INCOME_COLOR = "#15803D";
     private static final String EXPENSE_COLOR = "#DC2626";
 
     private final FinanceUseCase financeUseCase;
@@ -113,7 +113,7 @@ public class FinanceView extends VerticalLayout {
                 .set("display", "block")
                 .set("font-size", "0.875rem")
                 .set("font-weight", "500")
-                .set("color", accent);
+                .set("color", valueColor);
 
         value.getStyle()
                 .set("display", "block")

@@ -26,6 +26,7 @@ final class PageCard {
         }
 
         Div card = new Div(body);
+        card.getElement().setAttribute("role", "main");
         card.setWidthFull();
         if (fullHeight) {
             card.setHeightFull();
